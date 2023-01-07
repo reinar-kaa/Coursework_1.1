@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    private static final Employee[] employees = new Employee[10];
+    private static final Employee[] employees = new Employee[5];
 
     public static void main(String[] args) {
         employees[0] = new Employee(10000, "Блинов Вячеслав Владимирович");
@@ -71,10 +71,10 @@ public class Main {
         int sum = 0;
         for (Employee employee : employees) {
             if (employee != null) {
-                sum += employee.getSalary() / 5;
+                sum += employee.getSalary();
             }
         }
-        return sum;
+        return sum / employees.length;
     }
 
     public static void printEmployeesNames() { //печать всех Ф.И.О. сотрудников отдельно
